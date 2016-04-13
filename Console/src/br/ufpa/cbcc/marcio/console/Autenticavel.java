@@ -11,5 +11,6 @@ public interface Autenticavel {
 
 	public boolean logar(String usuario, String senha);
 	public boolean alterarSenha();
+	public boolean desconectar();
 	
 }
