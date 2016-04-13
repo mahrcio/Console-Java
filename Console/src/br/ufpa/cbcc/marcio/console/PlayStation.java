@@ -4,7 +4,7 @@ public class PlayStation implements Autenticavel {
 
 	@Override
 	public boolean logar(String usuario, String senha) {
-		if ((usuario="Marcio") && (senha="123456"))
+		if ((usuario=="Marcio") && (senha=="123456"))
 			return true;
 		return false;
 	}
