@@ -4,7 +4,8 @@ public class PlayStation implements Autenticavel {
 
 	@Override
 	public boolean logar(String usuario, String senha) {
-		// TODO Auto-generated method stub
+		if ((usuario="Marcio") && (senha="123456"))
+			return true;
 		return false;
 	}
 	@Override
@@ -12,7 +13,9 @@ public class PlayStation implements Autenticavel {
 		// TODO Auto-generated method stub
 		return false;
 	}
-
+	public boolean desconectar(){
+		
+	}
 	
 
 }
