@@ -1,12 +1,63 @@
 package br.ufpa.cbcc.marcio.console;
 
-public class Psp {
-  bool wifiOn = false;
-  @Override
+public class Psp extends PlayStation {
+
+boolean wifiOn = false;
+int densidadeDePixels;
+int nivelDebateria; 
+	
+public Psp(){
+	System.out.println("Psp instanciado");
+}
+
+	@Override
 	public boolean logar(String usuario, String senha) {
-		if ((usuario=="Marcio") && (senha=="123456") && wifiOn)
-			return true;
-		return false;
+		try {
+			if ((usuario==nomeDeUsuario) && (senha==senhaDeAcesso) && nivelDebateria>0)
+				usuarioLogado=true;
+		} catch (Exception e) {
+			return false;
+		}
+		return usuarioLogado;
 	}
+	@Override
+	public boolean alterarSenha(String senha) {
+		try {
+			senhaDeAcesso=senha;
+			return true;
+		} catch (Exception e) {
+			// TODO: handle exception
+			return false;
+		}
+	}
+	public boolean deslogar(){
+		try {
+			usuarioLogado=false;
+			return true;
+		} catch (Exception e) {
+			// TODO: handle exception
+			return false;
+		}
+	}
+	
+	public boolean isWifiOn() {
+		return wifiOn;
+	}
+	public void setWifiOn(boolean wifiOn) {
+		this.wifiOn = wifiOn;
+	}
+	public int getDensidadeDePixels() {
+		return densidadeDePixels;
+	}
+	public void setDensidadeDePixels(int densidadeDePixels) {
+		this.densidadeDePixels = densidadeDePixels;
+	}
+	public int getNivelDebateria() {
+		return nivelDebateria;
+	}
+	public void setNivelDebateria(int nivelDebateria) {
+		this.nivelDebateria = nivelDebateria;
+	}
+	
 
 }

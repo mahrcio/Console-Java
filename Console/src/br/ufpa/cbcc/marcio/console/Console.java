@@ -1,19 +1,26 @@
 package br.ufpa.cbcc.marcio.console;
 
-public class Console {
+public abstract class Console extends Device {
 String marca;
 
 	public Console(){
-	marca="Desconhecida";
-	
+		super("Console");
+		this.setMarca("Desconhecida");
+		System.out.println("Console instanciado com marca: "+getMarca());
 	}
 	
 	public Console(String marca){
-	this.marca=marca;
+		super("Console");
+		this.marca=marca;
+		System.out.println("Console instanciado com marca: "+getMarca());
 	}
-	
-	public static void main(String[] args){
-		System.out.println("Alo Mundo");
+
+	public String getMarca() {
+		return marca;
+	}
+
+	public void setMarca(String marca) {
+		this.marca = marca;
 	}
 
 }

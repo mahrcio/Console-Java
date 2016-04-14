@@ -10,7 +10,8 @@ package br.ufpa.cbcc.marcio.console;
 public interface Autenticavel {
 
 	public boolean logar(String usuario, String senha);
-	public boolean alterarSenha();
-	public boolean desconectar();
+	boolean alterarSenha(String senha);
+	public boolean deslogar();
+	
 	
 }
