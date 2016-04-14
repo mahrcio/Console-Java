@@ -1,7 +1,7 @@
 package br.ufpa.cbcc.marcio.console;
 
 public abstract class Console extends Device {
-String marca;
+private String marca;
 
 	public Console(){
 		super("Console");

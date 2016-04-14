@@ -2,11 +2,12 @@ package br.ufpa.cbcc.marcio.console;
 
 public class Psp extends PlayStation {
 
-boolean wifiOn = false;
-int densidadeDePixels;
-int nivelDebateria; 
+private boolean wifiOn = false;
+private int densidadeDePixels;
+private int nivelDebateria=50; 
 	
 public Psp(){
+	super("Psp");
 	System.out.println("Psp instanciado");
 }
 
@@ -14,7 +15,12 @@ public Psp(){
 	public boolean logar(String usuario, String senha) {
 		try {
 			if ((usuario==nomeDeUsuario) && (senha==senhaDeAcesso) && nivelDebateria>0)
+				{
 				usuarioLogado=true;
+				System.out.println("Usuario logado com sucesso!");
+				}
+			else
+				System.out.println("Senha incorreta - Não logado!");
 		} catch (Exception e) {
 			return false;
 		}
@@ -24,6 +30,7 @@ public Psp(){
 	public boolean alterarSenha(String senha) {
 		try {
 			senhaDeAcesso=senha;
+			System.out.println("Senha alterada com sucesso!");
 			return true;
 		} catch (Exception e) {
 			// TODO: handle exception
@@ -33,6 +40,7 @@ public Psp(){
 	public boolean deslogar(){
 		try {
 			usuarioLogado=false;
+			System.out.println("Usuario deslogado com sucesso!");
 			return true;
 		} catch (Exception e) {
 			// TODO: handle exception

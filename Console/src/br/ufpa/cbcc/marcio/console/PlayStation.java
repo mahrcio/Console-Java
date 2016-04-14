@@ -2,16 +2,22 @@ package br.ufpa.cbcc.marcio.console;
 
 public class PlayStation extends Console implements Autenticavel {
 
-	boolean usuarioLogado;
-	String senhaDeAcesso;
-	String nomeDeUsuario;
-	boolean ligadoNaTomada;
+	protected boolean usuarioLogado=false;
+	protected String senhaDeAcesso="12345";
+	protected String nomeDeUsuario="marcio";
+	private boolean ligadoNaTomada;
+	private String subTipo;
 	
 	public PlayStation() {
 	super("PlayStation");
 	System.out.println("PlayStation instanciado");
 	}
 	
+	public PlayStation(String subTipo){
+		super("PlayStation");
+		this.subTipo=subTipo;
+		System.out.println("PlayStation instanciado com subtipo Psp");
+	}
 	
 	public String getNomeDeUsuario() {
 		return nomeDeUsuario;
@@ -53,9 +59,7 @@ public class PlayStation extends Console implements Autenticavel {
 		} catch (Exception e) {
 			// TODO: handle exception
 			return false;
-		}
-		
-		
+		}	
 	}
 	
 

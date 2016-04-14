@@ -1,10 +1,10 @@
 package br.ufpa.cbcc.marcio.console;
 
 public class Xbox extends Console implements Autenticavel{
-	boolean usuarioLogado;
-	String senhaDeAcesso;
-	String nomeDeUsuario;
-	boolean ligadoNaTomada;
+	protected boolean usuarioLogado;
+	protected String senhaDeAcesso;
+	protected String nomeDeUsuario;
+	private boolean ligadoNaTomada;
 	
 	
 	public Xbox(){
