@@ -1,10 +1,11 @@
 package br.ufpa.cbcc.marcio.console;
 
-public class Xbox extends Console implements Autenticavel{
+public class Xbox extends Console implements Autenticavel, SensorDeMovimento{
 	protected boolean usuarioLogado;
 	protected String senhaDeAcesso;
 	protected String nomeDeUsuario;
 	private boolean ligadoNaTomada;
+	private boolean ligadoSensorDeMovimento;
 	
 	
 	public Xbox(){
@@ -55,6 +56,20 @@ public class Xbox extends Console implements Autenticavel{
 			return false;
 		}
 		
+		
+	}
+
+	@Override
+	public void ligarSensor() {
+		this.ligadoSensorDeMovimento=true;
+		
+	}
+
+	@Override
+	public void detectarMovimento() {
+		if (ligadoSensorDeMovimento){
+			System.out.println("Sensor detectando Movimentos");
+		}
 		
 	}
 	

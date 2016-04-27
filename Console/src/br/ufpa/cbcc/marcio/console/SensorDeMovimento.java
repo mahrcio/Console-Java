@@ -8,5 +8,7 @@ package br.ufpa.cbcc.marcio.console;
  *
  */
 public interface SensorDeMovimento {
+	public void ligarSensor();
+	public void detectarMovimento();
 
 }

@@ -66,6 +66,12 @@ public Psp(){
 	public void setNivelDebateria(int nivelDebateria) {
 		this.nivelDebateria = nivelDebateria;
 	}
+
+	@Override
+	public String toString() {
+		return "Psp [wifiOn=" + wifiOn + ", densidadeDePixels=" + densidadeDePixels + ", nivelDebateria="
+				+ nivelDebateria + "]";
+	}
 	
 
 }
