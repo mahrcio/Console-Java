@@ -18,7 +18,15 @@ public class PlayStation extends Console implements Autenticavel {
 		this.subTipo=subTipo;
 		System.out.println("PlayStation instanciado com subtipo Psp");
 	}
-	
+	public PlayStation(PlayStation playstation){
+		super((Console)playstation);
+		usuarioLogado=playstation.usuarioLogado;
+		senhaDeAcesso=playstation.senhaDeAcesso;
+		nomeDeUsuario=playstation.nomeDeUsuario;
+		ligadoNaTomada=playstation.ligadoNaTomada;
+		subTipo=playstation.subTipo;
+		System.out.println("PlayStation instanciado como Copia");
+	}
 	public String getNomeDeUsuario() {
 		return nomeDeUsuario;
 	}

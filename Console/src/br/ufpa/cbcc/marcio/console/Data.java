@@ -19,7 +19,9 @@ private static final int MESMAXIMO=12;
 		    }
 	}
 	public Data(Data data){
-		    this(data.dia,data.mes,data.ano);
+		    dia=data.dia;
+		    mes=data.mes;
+		    ano=data.ano;
 		}
 
 	public int getDia() {

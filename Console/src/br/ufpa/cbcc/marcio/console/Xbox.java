@@ -12,7 +12,15 @@ public class Xbox extends Console implements Autenticavel, SensorDeMovimento{
 		super("Xbox");
 		System.out.println("Xbox instanciado!");
 	}
-	
+	public Xbox(Xbox xbox){
+		super((Xbox) xbox);
+		usuarioLogado=xbox.usuarioLogado;
+		senhaDeAcesso=xbox.senhaDeAcesso;
+		nomeDeUsuario=xbox.nomeDeUsuario;
+		ligadoNaTomada=xbox.ligadoNaTomada;
+		ligadoSensorDeMovimento=xbox.ligadoSensorDeMovimento;
+		System.out.println("Xbox instanciado como copia!");
+	}
 	public String getNomeDeUsuario() {
 		return nomeDeUsuario;
 	}

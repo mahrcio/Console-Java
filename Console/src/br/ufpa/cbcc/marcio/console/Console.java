@@ -17,7 +17,12 @@ private Data dataDefabricacao;
 		setDataDefabricacao(Data.gerarDataAtual());
 		System.out.println("Console instanciado com marca: "+getMarca());
 	}
-
+	public Console(Console console){
+		super((Device)console);
+		marca=console.marca;
+		dataDefabricacao=console.dataDefabricacao;
+		System.out.println("Console instanciado como copia, marca: "+getMarca());
+	}
 	public String getMarca() {
 		return marca;
 	}

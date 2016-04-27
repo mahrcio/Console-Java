@@ -8,7 +8,10 @@ private String tipoDevice;
         this.setTipoDevice(tipoDevice);
         System.out.println("Device instanciado como: "+tipoDevice);
       }
-
+public Device(Device device){
+	this.tipoDevice=device.tipoDevice;
+	System.out.println("Device instanciado como copia: "+tipoDevice);
+}
 public String getTipoDevice() {
 	return tipoDevice;
 }

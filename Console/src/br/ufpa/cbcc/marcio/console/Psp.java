@@ -10,6 +10,13 @@ public Psp(){
 	super("Psp");
 	System.out.println("Psp instanciado");
 }
+public Psp(Psp psp){
+	super((PlayStation)psp);
+	wifiOn=psp.wifiOn;
+	densidadeDePixels=psp.densidadeDePixels;
+	nivelDebateria=psp.nivelDebateria;
+	System.out.println("Psp instanciado como copia");
+}
 
 	@Override
 	public boolean logar(String usuario, String senha) {

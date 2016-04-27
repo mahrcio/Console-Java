@@ -5,7 +5,9 @@ private String nome;
 	public Game(String nome) {
 	setNome(nome);	
 	}
-	
+	public Game(Game game) {
+		nome=game.nome;	
+		}
 	public String getNome() {
 		return nome;
 	}
