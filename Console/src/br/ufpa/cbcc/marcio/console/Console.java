@@ -3,6 +3,8 @@ package br.ufpa.cbcc.marcio.console;
 public abstract class Console extends Device {
 private String marca;
 private Data dataDefabricacao;
+protected boolean onoff=false;
+protected static String versaoFirmware;
 
 	public Console(){
 		super("Console");
@@ -46,5 +48,5 @@ private Data dataDefabricacao;
 			System.out.println("Erro!! Não foi possivel exibir a Data de Fabricação");
 		}
 	}
-	
+	public abstract void atualizarFirmware(String novaVersao);
 }

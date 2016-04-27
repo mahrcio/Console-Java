@@ -81,6 +81,21 @@ public Psp(Psp psp){
 		return "Psp [wifiOn=" + wifiOn + ", densidadeDePixels=" + densidadeDePixels + ", nivelDebateria="
 				+ nivelDebateria + "]";
 	}
+	public void ligar(){
+		if (nivelDebateria>0 && !onoff ){
+			
+			System.out.println("Psp foi ligado!");
+		}
+		else if (nivelDebateria>0 && onoff)
+			System.out.println("Psp já esta ligado!");
+		else
+			System.out.println("Não foi possivel ligar!");
+	}
+	@Override
+	public void atualizarFirmware(String novaVersao) {
+		// TODO Auto-generated method stub
+		if ((conectadoAoServidorSony)&& (nivelDebateria>50))
+		versaoFirmware=novaVersao;
+	}
 	
-
 }

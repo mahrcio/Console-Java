@@ -20,4 +20,6 @@ private void setTipoDevice(String tipoDevice) {
 	this.tipoDevice = tipoDevice;
 }
 
+public abstract void ligar();
+
 }

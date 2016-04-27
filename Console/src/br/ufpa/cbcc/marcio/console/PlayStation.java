@@ -7,6 +7,7 @@ public class PlayStation extends Console implements Autenticavel {
 	protected String nomeDeUsuario="marcio";
 	private boolean ligadoNaTomada;
 	private String subTipo;
+	protected boolean conectadoAoServidorSony=false;
 	
 	public PlayStation() {
 	super("PlayStation");
@@ -72,5 +73,22 @@ public class PlayStation extends Console implements Autenticavel {
 		}	
 	}
 	
+	public void ligar(){
+		if (!ligadoNaTomada && !onoff){
+			
+			System.out.println("PlayStation foi ligado!");
+		}
+		else if (!ligadoNaTomada && onoff)
+			System.out.println("PlayStation já esta ligado!");
+		else
+			System.out.println("Não foi possivel ligar!");
+	}
+
+	@Override
+	public void atualizarFirmware(String novaVersao) {
+		// TODO Auto-generated method stub
+		if (conectadoAoServidorSony)
+		versaoFirmware=novaVersao;
+	}
 
 }

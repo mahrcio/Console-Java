@@ -6,6 +6,8 @@ public class Xbox extends Console implements Autenticavel, SensorDeMovimento{
 	protected String nomeDeUsuario;
 	private boolean ligadoNaTomada;
 	private boolean ligadoSensorDeMovimento=false;
+	private boolean onoff=false;
+	private boolean conectadoAoServidorMicrosoft=false;
 	
 	
 	public Xbox(){
@@ -80,6 +82,20 @@ public class Xbox extends Console implements Autenticavel, SensorDeMovimento{
 		}
 		
 	}
-	
-
+	public void ligar(){
+		if (!ligadoNaTomada && !onoff){
+			
+			System.out.println("Xbox foi ligado!");
+		}
+		else if (!ligadoNaTomada && onoff)
+			System.out.println("Xbox já esta ligado!");
+		else
+			System.out.println("Não foi possivel ligar!");
+	}
+	@Override
+	public void atualizarFirmware(String novaVersao) {
+		// TODO Auto-generated method stub
+		if (conectadoAoServidorMicrosoft)
+		versaoFirmware=novaVersao;
+	}
 }
