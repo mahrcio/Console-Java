@@ -38,6 +38,8 @@ public class Main{
 	  pspVita.logar("marcio", "12345");
 	  pspVita.logar("marcio", "123");
 	  pspVita.deslogar();
+	  pspVita.printDataDefabricacao();
 	  System.out.println("Info PspVita"+pspVita.toString());
+	  
   }
 }

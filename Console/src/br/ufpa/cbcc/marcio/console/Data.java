@@ -18,6 +18,9 @@ private static final int MESMAXIMO=12;
 		        }
 		    }
 	}
+	public Data(Data data){
+		    this(data.dia,data.mes,data.ano);
+		}
 
 	public int getDia() {
 		return dia;
@@ -55,7 +58,7 @@ private static final int MESMAXIMO=12;
 
 	@Override
 	public String toString() {
-		return "Data [dia=" + dia + ", mes=" + mes + ", ano=" + ano + "]";
+		return "Data ["+ dia + "/" + mes + "/" + ano + "]";
 	}
 		
 }

@@ -14,6 +14,7 @@ private Data dataDefabricacao;
 	public Console(String marca){
 		super("Console");
 		this.marca=marca;
+		setDataDefabricacao(Data.gerarDataAtual());
 		System.out.println("Console instanciado com marca: "+getMarca());
 	}
 
@@ -33,4 +34,12 @@ private Data dataDefabricacao;
 		this.dataDefabricacao = dataDefabricacao;
 	}
 
+	public void printDataDefabricacao(){
+		try {
+			System.out.println("Fabricacao: "+dataDefabricacao.toString());
+		} catch (NullPointerException e) {
+			System.out.println("Erro!! Não foi possivel exibir a Data de Fabricação");
+		}
+	}
+	
 }
