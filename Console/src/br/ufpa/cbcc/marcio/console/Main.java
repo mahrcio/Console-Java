@@ -24,7 +24,7 @@ public class Main{
      for(int i=0 ; i < videogames.length ; i++){
     	 if(videogames[i] instanceof PlayStation){
     		 System.out.println("Instanceof Videogame: PlayStation");
-    		 ((PlayStation)videogames[i]).logar("marcio","12345");    		 
+    		 ((PlayStation)videogames[i]).conectarAoServidorSony();    		 
     	 }
     	 else if(videogames[i] instanceof Xbox){
     		 System.out.println("Instanceof Videogame: Xbox");

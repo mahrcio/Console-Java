@@ -90,5 +90,7 @@ public class PlayStation extends Console implements Autenticavel {
 		if (conectadoAoServidorSony)
 		versaoFirmware=novaVersao;
 	}
-
+public void conectarAoServidorSony(){
+	conectadoAoServidorSony=true;
+}
 }
