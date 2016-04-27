@@ -5,7 +5,7 @@ public class Xbox extends Console implements Autenticavel, SensorDeMovimento{
 	protected String senhaDeAcesso;
 	protected String nomeDeUsuario;
 	private boolean ligadoNaTomada;
-	private boolean ligadoSensorDeMovimento;
+	private boolean ligadoSensorDeMovimento=false;
 	
 	
 	public Xbox(){

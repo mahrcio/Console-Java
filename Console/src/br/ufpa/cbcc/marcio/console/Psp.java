@@ -73,7 +73,9 @@ public Psp(Psp psp){
 	public void setNivelDebateria(int nivelDebateria) {
 		this.nivelDebateria = nivelDebateria;
 	}
-
+	public void printNivelDeBateria() {
+		System.out.println("Nivel de Bateria: "+nivelDebateria);
+	}
 	@Override
 	public String toString() {
 		return "Psp [wifiOn=" + wifiOn + ", densidadeDePixels=" + densidadeDePixels + ", nivelDebateria="

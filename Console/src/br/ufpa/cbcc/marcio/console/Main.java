@@ -24,12 +24,16 @@ public class Main{
      for(int i=0 ; i < videogames.length ; i++){
     	 if(videogames[i] instanceof PlayStation){
     		 System.out.println("Instanceof Videogame: PlayStation");
+    		 ((PlayStation)videogames[i]).logar("marcio","12345");    		 
     	 }
     	 else if(videogames[i] instanceof Xbox){
     		 System.out.println("Instanceof Videogame: Xbox");
+    		 ((Xbox)videogames[i]).ligarSensor();
+    		 ((Xbox)videogames[i]).detectarMovimento();
     	 }
     	 else if(videogames[i] instanceof Psp){
     		 System.out.println("Instanceof Videogame: Psp");
+    		 ((Psp)videogames[i]).printNivelDeBateria();
     	 }
     	  
      }

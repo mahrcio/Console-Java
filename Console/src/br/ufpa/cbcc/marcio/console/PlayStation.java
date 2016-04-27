@@ -45,7 +45,9 @@ public class PlayStation extends Console implements Autenticavel {
 		try {
 			if ((usuario==nomeDeUsuario) && (senha==senhaDeAcesso))
 				usuarioLogado=true;
+			System.out.println("Usuario logado com sucesso!!");
 		} catch (Exception e) {
+			System.out.println("Nao logado, Usuario ou senha incorreta!");
 			return false;
 		}
 		return usuarioLogado;
